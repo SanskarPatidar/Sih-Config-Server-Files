@@ -1,4 +1,4 @@
-## How It Works: Property Precedence
+## Property Precedence
 Spring Boot applies configuration in a specific order, creating layers of properties. When the same property is defined in multiple places, the one with the higher precedence (the one applied later) wins.
 
 Here's the simplified order of precedence for your scenario, from highest to lowest:
