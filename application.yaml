@@ -6,8 +6,17 @@ spring:
 eureka:
   client:
     service-url:
-      defaultZone: http://192.168.249.47:8761/eureka/
+      defaultZone: http://localhost:8761/eureka/
   instance:
-    hostname: 192.168.249.47
+    hostname: localhost
     prefer-ip-address: true
     instance-id: ${spring.application.name}:${server.port}
+
+# distributed tracing using zipkin & sleuth
+management:
+  tracing:
+    sampling:
+      probability: 1.0
+  zipkin:
+    tracing:
+      endpoint: http://localhost:9411/api/v2/spans
