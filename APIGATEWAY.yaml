@@ -73,7 +73,7 @@ springdoc:
       - name: AUTHSERVICE
         url: /auth/v3/api-docs
       - name: CITIZENSERVICE
-        url: /v3/api-docs
+        url: /citizen/v3/api-docs
       - name: COMPLAINTSERVICE
         url: /complaint/v3/api-docs
       - name: DEPARTMENTADMINSERVICE
