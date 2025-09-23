@@ -83,6 +83,7 @@ springdoc:
       - name: ISSUESERVICE
         url: /issue/v3/api-docs
 
+# docker run -d -p 9411:9411 openzipkin/zipkin
 management:
   tracing:
     sampling:
