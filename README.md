@@ -3,8 +3,8 @@ Spring Boot applies configuration in a specific order, creating layers of proper
 
 Here's the simplified order of precedence for your scenario, from highest to lowest:
 
-Local Profile Properties (application-local.yml): These are the most specific and will override everything below them.
+1. Local Profile Properties (application-local.yml): These are the most specific and will override everything below them.
 
-Local Application Properties (application.yml): The base local configuration.
+2. Local Application Properties (application.yml): The base local configuration.
 
-Remote Properties from Config Server: These act as the default values for your application. They have the lowest priority and can be easily overridden locally.
+3. Remote Properties from Config Server: These act as the default values for your application. They have the lowest priority and can be easily overridden locally.
