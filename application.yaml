@@ -3,6 +3,8 @@ spring:
     mongodb:
       uri: ${MONGO_URI}
       auto-index-creation: true # indexing
+
+      
 eureka:
   client:
     service-url:
