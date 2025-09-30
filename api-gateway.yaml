@@ -1,5 +1,9 @@
 spring:
   cloud:
+    config: # Configuration for Spring Cloud Config, config service discovery
+      discovery:
+        enabled: true
+        service-id: config-server
     gateway:
       server:
         webflux:
