@@ -5,8 +5,7 @@ server:
 spring:
   application:
     name: complaint-service
-  config:
-    import: "configserver:"
+
   data:
     mongodb:
       uri: ${MONGO_URI}
