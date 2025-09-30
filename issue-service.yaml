@@ -4,8 +4,6 @@ server:
 spring:
   application:
     name: issue-service
-  config:
-    import: "configserver:"
   data:
     mongodb:
       uri: ${MONGO_URI}
