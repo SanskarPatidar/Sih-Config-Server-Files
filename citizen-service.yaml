@@ -5,8 +5,6 @@ server:
 spring:
   application:
     name: citizen-service
-  config:
-    import: "configserver:"
   data:
     mongodb:
       uri: ${MONGO_URI}
