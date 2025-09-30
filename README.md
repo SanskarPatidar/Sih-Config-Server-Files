@@ -9,6 +9,11 @@ Here's the simplified order of precedence for your scenario, from highest to low
 
 3. Remote Properties from Config Server: These act as the default values for your application. They have the lowest priority and can be easily overridden locally.
 
+4. Order in yamls:
+   {service-name}-{profile}.yaml
+   {service-name}.yaml
+   application-{profile}.yaml
+   application.yaml
 
 ### 🔹 How values are merged
 
