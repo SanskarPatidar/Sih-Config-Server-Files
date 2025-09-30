@@ -11,11 +11,13 @@ spring:
 eureka:
   client:
     service-url:
-      defaultZone: http://localhost:8761/eureka/
+      defaultZone: ${EUREKA_CLIENT_SERVICEURL_DEFAULTZONE:http://localhost:8761/eureka/}
   instance:
-    hostname: localhost
-    prefer-ip-address: true
-    instance-id: ${spring.application.name}:${server.port}
+    # REMOVED: hostname: localhost (This is critical)
+    # REMOVED: prefer-ip-address: true (Let Docker's DNS handle it)
+    
+    # This creates a unique ID for each container instance, e.g., "producer:a1b2c3d4"
+    instance-id: ${spring.application.name}:${spring.application.instance_id:${random.value}}
 
 # distributed tracing using zipkin & sleuth
 management:
