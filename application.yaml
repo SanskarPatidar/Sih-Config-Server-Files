@@ -16,9 +16,16 @@ eureka:
 
 # distributed tracing using zipkin & sleuth
 management:
+  endpoints:
+    web:
+      exposure:
+        # Expose the prometheus endpoint for scraping, and health for probes
+        include: prometheus,health
   tracing:
     sampling:
-      probability: 1.0 # Trace 100% of requests
+      # Trace 100% of requests. For production, you'd lower this to 0.1 (10%).
+      probability: 1.0
   zipkin:
     tracing:
-      endpoint: http://localhost:9411/api/v2/spans
+      # Inside Docker, the address of the zipkin container is its service name.
+      endpoint: http://zipkin:9411/api/v2/spans
