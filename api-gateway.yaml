@@ -11,35 +11,35 @@ spring:
                 key-resolver: "#{@ipKeyResolver}" # refer in code
           routes:
             - id: auth
-              uri: lb://AUTHSERVICE # lb = load balancer
+              uri: lb://auth-service # lb = load balancer
               predicates:
                 - Path=/auth/**
             - id: citizen
-              uri: lb://CITIZENSERVICE
+              uri: lb://citizen-service
               predicates:
                 - Path=/citizen/**
               filters:
                 - JWTFilter
             - id: complaint
-              uri: lb://COMPLAINTSERVICE
+              uri: lb://complaint-service
               predicates:
                 - Path=/complaint/**
               filters:
                 - JWTFilter
             - id: department-admin
-              uri: lb://DEPARTMENTADMINSERVICE
+              uri: lb://department-admin-service
               predicates:
                 - Path=/department-admin/**
               filters:
                 - JWTFilter
             - id: department-staff
-              uri: lb://DEPARTMENTSTAFFSERVICE
+              uri: lb://department-staff-service
               predicates:
                 - Path=/department-staff/**
               filters:
                 - JWTFilter
             - id: issue
-              uri: lb://ISSUESERVICE
+              uri: lb://issue-service
               predicates:
                 - Path=/issue/**
               filters:
@@ -61,17 +61,17 @@ springdoc:
     enabled: true
     path: /docs
     urls:
-      - name: AUTHSERVICE
+      - name: auth-service
         url: /auth/v3/api-docs
-      - name: CITIZENSERVICE
+      - name: citizen-service
         url: /citizen/v3/api-docs
-      - name: COMPLAINTSERVICE
+      - name: complaint-service
         url: /complaint/v3/api-docs
-      - name: DEPARTMENTADMINSERVICE
+      - name: department-admin-service
         url: /department-admin/v3/api-docs
-      - name: DEPARTMENTSTAFFSERVICE
+      - name: department-staff-service
         url: /department-staff/v3/api-docs
-      - name: ISSUESERVICE
+      - name: issue-service
         url: /issue/v3/api-docs
 
 
