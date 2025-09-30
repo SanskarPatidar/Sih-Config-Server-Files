@@ -29,3 +29,18 @@ management:
     tracing:
       # Inside Docker, the address of the zipkin container is its service name.
       endpoint: http://zipkin:9411/api/v2/spans
+
+# Prometheus setup
+global:
+  scrape_interval: 15s # Scrape metrics every 15 seconds
+
+scrape_configs:
+  - job_name: 'spring-boot-services'
+    metrics_path: '/actuator/prometheus'
+    # This uses Docker's built-in DNS to automatically find your services
+    dns_sd_configs:
+      - names:
+          - 'producer'
+          - 'consumer'
+        type: 'A'
+        port: 8080
