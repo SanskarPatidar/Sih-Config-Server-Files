@@ -7,17 +7,7 @@ spring:
       uri: ${MONGO_URI}
       auto-index-creation: true # indexing
 
-      
-eureka:
-  client:
-    service-url:
-      defaultZone: ${EUREKA_CLIENT_SERVICE_URL_DEFAULTZONE:http://localhost:8761/eureka/}
-  instance:
-    # REMOVED: hostname: localhost (This is critical)
-    # REMOVED: prefer-ip-address: true (Let Docker's DNS handle it)
     
-    # This creates a unique ID for each container instance, e.g., "producer:a1b2c3d4"
-    instance-id: ${spring.application.name}:${spring.application.instance_id:${random.value}}
 
 # distributed tracing using zipkin & sleuth
 management:
