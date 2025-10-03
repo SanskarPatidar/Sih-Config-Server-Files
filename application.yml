@@ -5,7 +5,7 @@ logging:
 spring:
   config:
     # Explicitly import the configuration
-    import: configserver:${SPRING_CONFIG_SERVER_CONNECTION} # mention of service discovery at api gateway is required
+    import: configserver: # mention of service discovery at api gateway is required
   data:
     mongodb:
       uri: ${MONGO_URI}
