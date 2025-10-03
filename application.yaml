@@ -1,6 +1,6 @@
 logging:
   level:
-    org.springframework.cloud.config: DEBUG: debug
+    org.springframework.cloud.config: debug
 
 spring:
   config:
