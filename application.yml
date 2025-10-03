@@ -1,11 +1,6 @@
 server:
   port: 8082
-spring:
-  config:
-  data:
-    mongodb:
-      uri: ${MONGO_URI}
-      auto-index-creation: true # indexing
+
 
     
 
