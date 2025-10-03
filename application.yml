@@ -2,8 +2,6 @@ server:
   port: 8082
 
 
-spring:
-  config:
 
 # distributed tracing using zipkin & sleuth
 management:
