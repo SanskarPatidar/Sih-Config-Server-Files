@@ -1,0 +1,27 @@
+server:
+  port: 8086
+  address: 0.0.0.0
+
+eureka:
+  client:
+    service-url:
+      defaultZone: ${EUREKA_CLIENT_SERVICE_URL_DEFAULTZONE}
+  instance:
+    instance-id: ${spring.application.name}:${spring.application.instance_id:${random.value}}
+    app name: issue-service # This is the name that shows up in Eureka
+    
+spring:
+  application:
+    name: issue-service
+  data:
+    mongodb:
+      uri: ${MONGO_URI}
+      auto-index-creation: true # indexing
+
+springdoc:
+  api-docs:
+    enabled: true
+    path: /issue/v3/api-docs
+  swagger-ui:
+    enabled: true
+    path: /issue/docs
