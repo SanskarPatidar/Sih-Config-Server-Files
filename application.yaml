@@ -12,6 +12,6 @@ management:
   zipkin:
     tracing:
       # Inside Docker, the address of the zipkin container is its service name.
-      endpoint: http://zipkin:9411/api/v2/spans
+      endpoint: ${ZIPKIN_CONNECTION_URL}
 
 
