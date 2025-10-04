@@ -22,7 +22,7 @@ spring:
                 key-resolver: "#{@ipKeyResolver}" # refer in code
           routes:
             - id: auth
-              uri: lb://auth-service # lb = load balancer
+              uri: lb://AUTH-SERVICE # lb = load balancer
               predicates:
                 - Path=/auth/**
             - id: citizen
