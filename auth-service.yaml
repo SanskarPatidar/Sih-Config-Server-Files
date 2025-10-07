@@ -32,6 +32,7 @@ spring:
 
 access_token_expiration: 86400000  # 1000*60*60*24 # 1 day
 refresh_token_expiration: 604800000  # 1000*60*60*24*7 # 7 days
+jwt_secret_key: ${SECRET_KEY}
 
 springdoc:
   api-docs:
