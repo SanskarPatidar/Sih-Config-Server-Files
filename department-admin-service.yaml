@@ -27,6 +27,9 @@ spring:
         publish-staff-profile-update-out-0:
           destination: staff-profile-updation-topic
           content-type: application/json
+        issue-acknowledged-out-0:
+          destination: issue-acknowledgement-topic
+          content-type: application/json
 
 springdoc:
   api-docs:
