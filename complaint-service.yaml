@@ -14,6 +14,15 @@ eureka:
 spring:
   application:
     name: complaint-service
+  cloud:
+    stream:
+      kafka:
+        binder:
+          brokers: ${KAFKA_CONNECTION}
+      bindings:
+        processIssueAcknowledgement-in-0: # <name-of-consumer-method>-in-0
+          destination: issue-acknowledgements-topic
+          group: complaint-service-ack-group
 
   data:
     mongodb:
