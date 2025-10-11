@@ -22,7 +22,7 @@ spring:
       bindings:
         processIssueAcknowledgement-in-0: # <name-of-consumer-method>-in-0
           destination: issue-acknowledgements-topic
-          group: complaint-service-ack-group
+          group: complaint-service-ack-group # go into specific, not inter service work
           content-type: application/json
 
   data:
