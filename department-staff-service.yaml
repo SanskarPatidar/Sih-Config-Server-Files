@@ -18,6 +18,16 @@ spring:
     mongodb:
       uri: ${MONGO_URI}
       auto-index-creation: true # indexing
+  cloud:
+    stream:
+      kafka:
+        binder:
+          brokers: ${KAFKA_CONNECTION}
+      bindings:
+        processDepartmentStaffProfileUpdateEvent-in-0: # <name-of-consumer-method>-in-0
+          destination: staff-profile-updation-topic
+          group: staff-profile-updation-group # go into specific, not inter service work
+          content-type: application/json
 
 springdoc:
   api-docs:
