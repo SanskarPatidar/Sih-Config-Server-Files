@@ -28,7 +28,7 @@ spring:
           destination: staff-profile-updation-topic
           content-type: application/json
         issue-acknowledged-out-0:
-          destination: issue-acknowledgement-topic
+          destination: dept-acknowledge-issue-topic
           content-type: application/json
 
 springdoc:
