@@ -23,6 +23,7 @@ spring:
         processIssueAcknowledgement-in-0: # <name-of-consumer-method>-in-0
           destination: issue-acknowledgements-topic
           group: complaint-service-ack-group
+          content-type: application/json
 
   data:
     mongodb:
