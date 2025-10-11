@@ -18,6 +18,15 @@ spring:
     mongodb:
       uri: ${MONGO_URI}
       auto-index-creation: true # indexing
+  cloud:
+    stream:
+      kafka:
+        binder:
+          brokers: ${KAFKA_CONNECTION}
+      bindings:
+        publish-staff-profile-update-out-0:
+          destination: staff-profile-updation-topic
+          content-type: application/json
 
 springdoc:
   api-docs:
